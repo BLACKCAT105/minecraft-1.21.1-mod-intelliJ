@@ -1,6 +1,8 @@
 package net.matthew.testmod;
 
 import com.mojang.logging.LogUtils;
+import net.matthew.testmod.item.Moditems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -30,6 +32,8 @@ public class TestMod {
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+        Moditems.register(modEventBus);
+
 
 
 
@@ -45,6 +49,10 @@ public class TestMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(Moditems.ALEXANDRITE);
+            event.accept(Moditems.RAW_ALEXANDRITE);
+        }
 
     }
 
