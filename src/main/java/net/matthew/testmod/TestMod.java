@@ -2,6 +2,7 @@ package net.matthew.testmod;
 
 import com.mojang.logging.LogUtils;
 import net.matthew.testmod.block.ModBlocks;
+import net.matthew.testmod.item.ModCreativeModeTabs;
 import net.matthew.testmod.item.Moditems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -32,6 +33,8 @@ public class TestMod {
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
 
         Moditems.register(modEventBus);
         ModBlocks.register(modEventBus);
