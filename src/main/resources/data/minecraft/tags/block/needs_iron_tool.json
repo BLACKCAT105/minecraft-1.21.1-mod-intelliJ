@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "testmod:alexandrite_block",
-    "testmod:raw_alexandrite_block"
+    "testmod:raw_alexandrite_block",
+    "testmod:green_block"
   ]
 }

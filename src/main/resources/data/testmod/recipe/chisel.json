@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "testmod:alexandrite_block"
+    },
+    "B": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "AAA",
+    "ABA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "testmod:chisel"
+  }
+}

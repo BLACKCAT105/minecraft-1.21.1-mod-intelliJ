@@ -1,6 +1,8 @@
 package net.matthew.testmod.block;
 
 import net.matthew.testmod.TestMod;
+import net.matthew.testmod.block.custom.MagicBlock;
+import net.matthew.testmod.block.custom.RotateBlock;
 import net.matthew.testmod.item.Moditems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -34,7 +36,11 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(3, 6), BlockBehaviour.Properties.of()
                     .strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
+    public static final RegistryObject<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> GREEN_BLOCK = registerBlock("green_block",
+            () -> new RotateBlock(BlockBehaviour.Properties.of().strength(2f).noOcclusion().requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
