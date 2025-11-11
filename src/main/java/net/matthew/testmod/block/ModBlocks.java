@@ -42,6 +42,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_BLOCK = registerBlock("green_block",
             () -> new RotateBlock(BlockBehaviour.Properties.of().strength(2f).noOcclusion().requiresCorrectToolForDrops()));
 
+    public static final  RegistryObject<Block> BLUE_GEM_BLOCK = registerBlock("blue_gem_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(3f).requiresCorrectToolForDrops()));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -7,6 +7,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.apache.commons.compress.compressors.lz77support.LZ77Compressor;
 
 public class Moditems {
     public static final DeferredRegister<Item> ITEMS =
@@ -19,6 +20,9 @@ public class Moditems {
 
     public static final RegistryObject<Item> CHISEL = ITEMS.register("chisel",
             () -> new ChiselItem(new Item.Properties().durability(32)));
+
+    public static final RegistryObject<Item> BLUE_GEM = ITEMS.register("blue_gem",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

@@ -46,6 +46,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.testmod.matthews_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.GREEN_BLOCK.get());
+                        output.accept(Moditems.BLUE_GEM.get());
+                        output.accept(ModBlocks.BLUE_GEM_BLOCK.get());
 
                     }).build());
 

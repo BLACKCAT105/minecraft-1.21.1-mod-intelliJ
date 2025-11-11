@@ -4,6 +4,9 @@
 
   "item.testmod.chisel": "Chisel",
 
+  "item.testmod.blue_gem": "Blue Gem",
+  "block.testmod.blue_gem_block": "Blue Gem Block",
+
   "block.testmod.alexandrite_block": "Block Of Alexandrite",
   "block.testmod.raw_alexandrite_block": "Block Of Raw Alexandrite",
   "block.testmod.alexandrite_ore": "Alexandrite Ore",
